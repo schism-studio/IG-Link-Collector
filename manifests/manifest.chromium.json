@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "IG Saved Link Collector",
-  "version": "1.4.0",
-  "description": "Lightweight saved-link collector with TXT/CSV export, Clear and optional auto-scroll.",
+  "name": "IG Link Collector",
+  "version": "1.4.1",
+  "description": "Lightweight collector for post and reel links on any Instagram page you browse, with TXT/CSV export, Clear and optional auto-scroll.",
   "content_scripts": [
     {
       "matches": ["https://www.instagram.com/*"],

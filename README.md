@@ -1,10 +1,10 @@
-# IG Saved Link Collector
+# IG Link Collector
 
-A lightweight desktop browser extension that collects post and reel links from your own Instagram Saved page while you scroll, then exports them as `.txt` or `.csv`. It runs entirely in your browser: no network requests, no accounts, no extra permissions.
+A lightweight desktop browser extension that collects post and reel links from any Instagram page you browse (feed, profiles, Explore, your Saved page and more) while you scroll, then exports them as `.txt` or `.csv`. It runs entirely in your browser: no network requests, no accounts, no extra permissions.
 
 ## Features
 
-- Collects `/p/`, `/reel/` and `/tv/` links as they appear on screen.
+- Collects `/p/`, `/reel/` and `/tv/` links as they appear on screen, on any instagram.com page.
 - Removes duplicate links automatically.
 - Keeps the list in the browser's localStorage between page reloads.
 - Exports TXT or CSV with a button.
@@ -33,11 +33,13 @@ Private windows: extensions are off in Firefox private windows by default. Allow
 
 ## Use
 
-1. Open your Instagram Saved page.
+1. Open any Instagram page that shows posts or reels, such as a profile or your Saved page.
 2. Scroll manually, or click Auto-scroll.
-3. Watch the `Saved: N` counter.
+3. Watch the `Links: N` counter.
 4. Click TXT or CSV to download the list.
 5. Click Clear when you want to start over.
+
+The extension keeps one combined list. Links from every page you visit are added to it, so click Clear before collecting from a different source if you want separate lists.
 
 After updating the extension, reload it and refresh the Instagram tab.
 
@@ -47,14 +49,14 @@ After updating the extension, reload it and refresh the Instagram tab.
 python build.py
 ```
 
-This writes one ZIP per browser into `dist/`. Source layout:
+This writes one ZIP per browser into `dist/`. Most people can skip this and download from Releases. Build it yourself to verify a release, change the code, or contribute. Source layout:
 
 - `src/content.js` is the single shared script.
 - `manifests/manifest.chromium.json` and `manifests/manifest.firefox.json` differ only by the Firefox add-on ID.
 
 ## Limitations
 
-- It only reads links already present on the page. It does not guarantee that every saved item loads.
+- It only reads links already present on the page. It does not guarantee that every item loads.
 - Auto-scroll is automated behavior and may conflict with Instagram's terms or trigger verification checks. Use it at your own risk, or scroll manually.
 - Instagram's page markup can change and break link detection.
 - Not affiliated with or endorsed by Instagram or Meta.

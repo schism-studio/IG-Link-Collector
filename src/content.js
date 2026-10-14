@@ -14,7 +14,7 @@
   box.style.cssText = 'position:fixed;bottom:12px;right:12px;z-index:2147483647;background:#111;color:white;font:13px system-ui;padding:8px 10px;border-radius:8px;display:flex;gap:8px;align-items:center';
   box.innerHTML = '<span></span><button data-action="txt">TXT</button><button data-action="csv">CSV</button><button data-action="clear">Clear</button><button data-action="scroll">Auto-scroll</button>';
   document.body.appendChild(box);
-  const show = () => { box.querySelector('span').textContent = `Saved: ${saved.size}`; };
+  const show = () => { box.querySelector('span').textContent = `Links: ${saved.size}`; };
   const scan = root => {
     const anchors = root.matches?.('a[href]') ? [root,...root.querySelectorAll('a[href]')] : root.querySelectorAll?.('a[href]') || [];
     let added = 0;
@@ -72,8 +72,8 @@
       return;
     }
     const links=[...saved].sort();
-    if (action==='txt') download(`instagram-saved-links-${links.length}.txt`,links.join('\n')+'\n','text/plain;charset=utf-8');
-    if (action==='csv') download(`instagram-saved-links-${links.length}.csv`,['number,url',...links.map((u,i)=>`${i+1},"${u}"`)].join('\n'),'text/csv;charset=utf-8');
+    if (action==='txt') download(`instagram-links-${links.length}.txt`,links.join('\n')+'\n','text/plain;charset=utf-8');
+    if (action==='csv') download(`instagram-links-${links.length}.csv`,['number,url',...links.map((u,i)=>`${i+1},"${u}"`)].join('\n'),'text/csv;charset=utf-8');
   });
   document.addEventListener('visibilitychange',() => { if (document.hidden) stop(); });
   window.addEventListener('pagehide',stop);

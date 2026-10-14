@@ -17,7 +17,7 @@ def main():
     DIST.mkdir(exist_ok=True)
     for browser, manifest_name in TARGETS.items():
         manifest = json.loads((ROOT / "manifests" / manifest_name).read_text(encoding="utf-8"))
-        out = DIST / f"ig-saved-link-collector-{browser}-v{manifest['version']}.zip"
+        out = DIST / f"ig-link-collector-{browser}-v{manifest['version']}.zip"
         with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
             zf.writestr("manifest.json", json.dumps(manifest, indent=2) + "\n")
             zf.write(SRC, "content.js")
