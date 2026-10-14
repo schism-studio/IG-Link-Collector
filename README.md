@@ -70,5 +70,7 @@ MIT. See LICENSE.
 If this tool is useful to you, optional donations help support development.
 
 [Support what I do on Ko-fi](https://ko-fi.com/icantproduce)
+[Venmo] (venmo.com/u/schismstudios)
+BTC: bc1qmqfpntjatt95mcdmvwtf28tpyzue00xkva0dzs
 
 The extension is free to use; donations are never required.
