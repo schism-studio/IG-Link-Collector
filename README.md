@@ -69,6 +69,7 @@ MIT. See LICENSE.
 
 If this tool is useful to you, optional donations help support development.
 
-ko_fi: icantproduce
+# .github/FUNDING.yml
+Support What I Do: [ko-fi.com/icantproduce]
 
 The extension is free to use; donations are never required.
