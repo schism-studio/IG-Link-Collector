@@ -64,3 +64,11 @@ This writes one ZIP per browser into `dist/`. Most people can skip this and down
 ## License
 
 MIT. See LICENSE.
+
+## Support
+
+If this tool is useful to you, optional donations help support development.
+
+ko_fi: icantproduce
+
+The extension is free to use; donations are never required.
